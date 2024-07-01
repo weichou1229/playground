@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var tests = []struct {
+var twoSumTests = []struct {
 	nums   []int
 	target int
 	want   []int
@@ -18,7 +18,7 @@ var tests = []struct {
 }
 
 func TestTwoSum(t *testing.T) {
-	for _, test := range tests {
+	for _, test := range twoSumTests {
 		t.Run("two-sum "+fmt.Sprint(test.nums), func(t *testing.T) {
 			out := twoSum(test.nums, test.target)
 			assert.ElementsMatch(t, test.want, out)
@@ -27,7 +27,7 @@ func TestTwoSum(t *testing.T) {
 }
 
 func BenchmarkTwoSum(b *testing.B) {
-	for _, test := range tests {
+	for _, test := range twoSumTests {
 		for i := 0; i < b.N; i++ {
 			twoSum(test.nums, test.target)
 		}
