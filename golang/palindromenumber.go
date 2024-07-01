@@ -1,5 +1,8 @@
 package golang
 
+// isPalindrome given an integer x, return true if x is a palindrome, and false otherwise.
+// Palindrome: An integer is a palindrome when it reads the same forward and backward.
+// https://leetcode.com/problems/palindrome-number
 func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
