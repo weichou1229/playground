@@ -26,6 +26,7 @@ var romanIntMap = map[string]int{
 // X can be placed before L (50) and C (100) to make 40 and 90.
 // C can be placed before D (500) and M (1000) to make 400 and 900.
 // Given a roman numeral, convert it to an integer.
+// https://leetcode.com/problems/roman-to-integer
 func romanToInt(s string) int {
 	ss := strings.Split(s, "")
 	sum := romanIntMap[ss[0]]
