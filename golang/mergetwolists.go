@@ -2,13 +2,14 @@ package golang
 
 import "sort"
 
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+// mergeTwoLists merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+// You are given the heads of two sorted linked lists list1 and list2, return the head of the merged linked list.
+// https://leetcode.com/problems/merge-two-sorted-lists
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	if list1 == nil && list2 == nil {
 		return nil
@@ -47,9 +48,4 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		nextNode = list[i]
 	}
 	return list[0]
-}
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
 }
